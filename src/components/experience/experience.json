@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_experience_experiences",
+  "info": {
+    "displayName": "experience",
+    "icon": "briefcase",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "companyName": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "workSummary": {
+      "type": "richtext"
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    }
+  }
+}

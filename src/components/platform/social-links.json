@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_platform_social_links",
+  "info": {
+    "displayName": "social links",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "platform": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}
