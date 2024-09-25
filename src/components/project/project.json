@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_project_projects",
+  "info": {
+    "displayName": "project",
+    "icon": "file",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "techStack": {
+      "type": "string"
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "links.links"
+    }
+  }
+}

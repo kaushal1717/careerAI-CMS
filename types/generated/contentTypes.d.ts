@@ -25,6 +25,7 @@ export interface ApiUserResumeUserResume extends Struct.CollectionTypeSchema {
     education: Schema.Attribute.Component<'education.education', true>;
     skills: Schema.Attribute.Component<'skills.skills', true>;
     themeColor: Schema.Attribute.String;
+    projects: Schema.Attribute.Component<'project.project', true>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
