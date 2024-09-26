@@ -2,21 +2,26 @@
   "collectionName": "components_education_educations",
   "info": {
     "displayName": "education",
-    "icon": "book"
+    "icon": "book",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "universityName": {
-      "type": "string"
+      "type": "string",
+      "default": "University Name"
     },
     "description": {
-      "type": "text"
+      "type": "text",
+      "default": "gpa-8.91"
     },
     "major": {
-      "type": "string"
+      "type": "string",
+      "default": "B.Tech"
     },
     "degree": {
-      "type": "string"
+      "type": "string",
+      "default": "AI & Data Science"
     },
     "startDate": {
       "type": "date"

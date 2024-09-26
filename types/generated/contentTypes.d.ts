@@ -16,7 +16,7 @@ export interface ApiUserResumeUserResume extends Struct.CollectionTypeSchema {
     resumeId: Schema.Attribute.String;
     firstName: Schema.Attribute.String;
     lastName: Schema.Attribute.String;
-    jobTitle: Schema.Attribute.String;
+    jobTitle: Schema.Attribute.String & Schema.Attribute.Private;
     email: Schema.Attribute.String;
     phone: Schema.Attribute.String;
     socialLinks: Schema.Attribute.Component<'platform.social-links', true>;
@@ -24,7 +24,7 @@ export interface ApiUserResumeUserResume extends Struct.CollectionTypeSchema {
     experience: Schema.Attribute.Component<'experience.experience', true>;
     education: Schema.Attribute.Component<'education.education', true>;
     skills: Schema.Attribute.Component<'skills.skills', true>;
-    themeColor: Schema.Attribute.String;
+    themeColor: Schema.Attribute.String & Schema.Attribute.DefaultTo<'#ff6666'>;
     projects: Schema.Attribute.Component<'project.project', true>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;

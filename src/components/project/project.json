@@ -8,13 +8,16 @@
   "options": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "default": "Project Title"
     },
     "description": {
-      "type": "richtext"
+      "type": "richtext",
+      "default": "<ul>   <li>     Lorem ipsum dolor sit amet, <b>consectetur</b> adipiscing elit.   </li>   <li>     Nulla non tortor ac nibh dignissim egestas nec a <b>magna</b>. Etiam     bibendum <b>purus non justo</b> elementum egestas.   </li>   <li>     Vestibulum pharetra <b>orci quis sapien</b> convallis, vel pellentesque     lorem hendrerit. <b>Morbi</b> et lacus lectus. Nam vehicula a erat id     efficitur.   </li>   <li>     Curabitur volutpat erat id magna porttitor ultrices. Cras consequat, orci in     lacinia malesuada, nibh eros interdum massa, ut venenatis ante felis tempus     erat. Proin a dolor quis libero convallis posuere. Mauris id est cursus,     porta risus in, pulvinar augue. In vel viverra ligula.   </li> </ul>;"
     },
     "techStack": {
-      "type": "string"
+      "type": "string",
+      "default": "JavaScript, TypeScript, ReactJS"
     },
     "links": {
       "type": "component",

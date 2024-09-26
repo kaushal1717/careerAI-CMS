@@ -25,7 +25,8 @@
       "type": "string"
     },
     "jobTitle": {
-      "type": "string"
+      "type": "string",
+      "private": true
     },
     "email": {
       "type": "string"
@@ -58,7 +59,8 @@
       "component": "skills.skills"
     },
     "themeColor": {
-      "type": "string"
+      "type": "string",
+      "default": "#ff6666"
     },
     "projects": {
       "type": "component",

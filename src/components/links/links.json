@@ -1,15 +1,18 @@
 {
   "collectionName": "components_links_links",
   "info": {
-    "displayName": "links"
+    "displayName": "links",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "link": {
-      "type": "string"
+      "type": "string",
+      "default": "https://github.com"
     },
     "placeholder": {
-      "type": "string"
+      "type": "string",
+      "default": "Github"
     }
   }
 }

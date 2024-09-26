@@ -2,15 +2,18 @@
   "collectionName": "components_skills_skills",
   "info": {
     "displayName": "skills",
-    "icon": "search"
+    "icon": "search",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "skillType": {
-      "type": "string"
+      "type": "string",
+      "default": "Programming languages"
     },
     "skillNames": {
-      "type": "string"
+      "type": "string",
+      "default": "C, C++, Java, Python, JavaScript, TypeScript"
     }
   }
 }

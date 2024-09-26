@@ -2,15 +2,18 @@
   "collectionName": "components_platform_social_links",
   "info": {
     "displayName": "social links",
-    "icon": "book"
+    "icon": "book",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "platform": {
-      "type": "string"
+      "type": "string",
+      "default": "Github"
     },
     "link": {
-      "type": "string"
+      "type": "string",
+      "default": "https://github.com"
     }
   }
 }
