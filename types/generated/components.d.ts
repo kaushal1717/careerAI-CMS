@@ -1,19 +1,5 @@
 import type { Struct, Schema } from '@strapi/strapi';
 
-export interface PlatformSocialLinks extends Struct.ComponentSchema {
-  collectionName: 'components_platform_social_links';
-  info: {
-    displayName: 'social links';
-    icon: 'book';
-    description: '';
-  };
-  attributes: {
-    platform: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Github'>;
-    link: Schema.Attribute.String &
-      Schema.Attribute.DefaultTo<'https://github.com'>;
-  };
-}
-
 export interface SkillsSkills extends Struct.ComponentSchema {
   collectionName: 'components_skills_skills';
   info: {
@@ -26,6 +12,20 @@ export interface SkillsSkills extends Struct.ComponentSchema {
       Schema.Attribute.DefaultTo<'Programming languages'>;
     skillNames: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'C, C++, Java, Python, JavaScript, TypeScript'>;
+  };
+}
+
+export interface PlatformSocialLinks extends Struct.ComponentSchema {
+  collectionName: 'components_platform_social_links';
+  info: {
+    displayName: 'social links';
+    icon: 'book';
+    description: '';
+  };
+  attributes: {
+    platform: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Github'>;
+    link: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'https://github.com'>;
   };
 }
 
@@ -47,6 +47,19 @@ export interface ProjectProject extends Struct.ComponentSchema {
   };
 }
 
+export interface LinksLinks extends Struct.ComponentSchema {
+  collectionName: 'components_links_links';
+  info: {
+    displayName: 'links';
+    description: '';
+  };
+  attributes: {
+    link: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'https://github.com'>;
+    placeholder: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Github'>;
+  };
+}
+
 export interface ExperienceExperience extends Struct.ComponentSchema {
   collectionName: 'components_experience_experiences';
   info: {
@@ -61,19 +74,6 @@ export interface ExperienceExperience extends Struct.ComponentSchema {
     workSummary: Schema.Attribute.RichText;
     startDate: Schema.Attribute.Date;
     endDate: Schema.Attribute.Date;
-  };
-}
-
-export interface LinksLinks extends Struct.ComponentSchema {
-  collectionName: 'components_links_links';
-  info: {
-    displayName: 'links';
-    description: '';
-  };
-  attributes: {
-    link: Schema.Attribute.String &
-      Schema.Attribute.DefaultTo<'https://github.com'>;
-    placeholder: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Github'>;
   };
 }
 
@@ -99,11 +99,11 @@ export interface EducationEducation extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
-      'platform.social-links': PlatformSocialLinks;
       'skills.skills': SkillsSkills;
+      'platform.social-links': PlatformSocialLinks;
       'project.project': ProjectProject;
-      'experience.experience': ExperienceExperience;
       'links.links': LinksLinks;
+      'experience.experience': ExperienceExperience;
       'education.education': EducationEducation;
     }
   }
