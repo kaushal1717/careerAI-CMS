@@ -24,10 +24,6 @@
     "lastName": {
       "type": "string"
     },
-    "jobTitle": {
-      "type": "string",
-      "private": true
-    },
     "email": {
       "type": "string"
     },
@@ -66,6 +62,9 @@
       "type": "component",
       "repeatable": true,
       "component": "project.project"
+    },
+    "jobTitle": {
+      "type": "string"
     }
   }
 }
