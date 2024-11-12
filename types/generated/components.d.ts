@@ -15,6 +15,20 @@ export interface SkillsSkills extends Struct.ComponentSchema {
   };
 }
 
+export interface PlatformSocialLinks extends Struct.ComponentSchema {
+  collectionName: 'components_platform_social_links';
+  info: {
+    displayName: 'social links';
+    icon: 'book';
+    description: '';
+  };
+  attributes: {
+    platform: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Github'>;
+    link: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'https://github.com'>;
+  };
+}
+
 export interface ProjectProject extends Struct.ComponentSchema {
   collectionName: 'components_project_projects';
   info: {
@@ -30,20 +44,6 @@ export interface ProjectProject extends Struct.ComponentSchema {
     techStack: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'JavaScript, TypeScript, ReactJS'>;
     links: Schema.Attribute.Component<'links.links', true>;
-  };
-}
-
-export interface PlatformSocialLinks extends Struct.ComponentSchema {
-  collectionName: 'components_platform_social_links';
-  info: {
-    displayName: 'social links';
-    icon: 'book';
-    description: '';
-  };
-  attributes: {
-    platform: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Github'>;
-    link: Schema.Attribute.String &
-      Schema.Attribute.DefaultTo<'https://github.com'>;
   };
 }
 
@@ -100,8 +100,8 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'skills.skills': SkillsSkills;
-      'project.project': ProjectProject;
       'platform.social-links': PlatformSocialLinks;
+      'project.project': ProjectProject;
       'links.links': LinksLinks;
       'experience.experience': ExperienceExperience;
       'education.education': EducationEducation;
