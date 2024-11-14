@@ -1,57 +1,46 @@
-import type { Struct, Schema } from '@strapi/strapi';
+import type { Schema, Struct } from '@strapi/strapi';
 
-export interface SkillsSkills extends Struct.ComponentSchema {
-  collectionName: 'components_skills_skills';
+export interface EducationEducation extends Struct.ComponentSchema {
+  collectionName: 'components_education_educations';
   info: {
-    displayName: 'skills';
-    icon: 'search';
     description: '';
-  };
-  attributes: {
-    skillType: Schema.Attribute.String &
-      Schema.Attribute.DefaultTo<'Programming languages'>;
-    skillNames: Schema.Attribute.String &
-      Schema.Attribute.DefaultTo<'C, C++, Java, Python, JavaScript, TypeScript'>;
-  };
-}
-
-export interface PlatformSocialLinks extends Struct.ComponentSchema {
-  collectionName: 'components_platform_social_links';
-  info: {
-    displayName: 'social links';
+    displayName: 'education';
     icon: 'book';
-    description: '';
   };
   attributes: {
-    platform: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Github'>;
-    link: Schema.Attribute.String &
-      Schema.Attribute.DefaultTo<'https://github.com'>;
+    degree: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'AI & Data Science'>;
+    description: Schema.Attribute.Text & Schema.Attribute.DefaultTo<'gpa-8.91'>;
+    endDate: Schema.Attribute.Date;
+    major: Schema.Attribute.String & Schema.Attribute.DefaultTo<'B.Tech'>;
+    startDate: Schema.Attribute.Date;
+    universityName: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'University Name'>;
   };
 }
 
-export interface ProjectProject extends Struct.ComponentSchema {
-  collectionName: 'components_project_projects';
+export interface ExperienceExperience extends Struct.ComponentSchema {
+  collectionName: 'components_experience_experiences';
   info: {
-    displayName: 'project';
-    icon: 'file';
     description: '';
+    displayName: 'experience';
+    icon: 'briefcase';
   };
   attributes: {
-    title: Schema.Attribute.String &
-      Schema.Attribute.DefaultTo<'Project Title'>;
-    description: Schema.Attribute.RichText &
-      Schema.Attribute.DefaultTo<'<ul>   <li>     Lorem ipsum dolor sit amet, <b>consectetur</b> adipiscing elit.   </li>   <li>     Nulla non tortor ac nibh dignissim egestas nec a <b>magna</b>. Etiam     bibendum <b>purus non justo</b> elementum egestas.   </li>   <li>     Vestibulum pharetra <b>orci quis sapien</b> convallis, vel pellentesque     lorem hendrerit. <b>Morbi</b> et lacus lectus. Nam vehicula a erat id     efficitur.   </li>   <li>     Curabitur volutpat erat id magna porttitor ultrices. Cras consequat, orci in     lacinia malesuada, nibh eros interdum massa, ut venenatis ante felis tempus     erat. Proin a dolor quis libero convallis posuere. Mauris id est cursus,     porta risus in, pulvinar augue. In vel viverra ligula.   </li> </ul>;'>;
-    techStack: Schema.Attribute.String &
-      Schema.Attribute.DefaultTo<'JavaScript, TypeScript, ReactJS'>;
-    links: Schema.Attribute.Component<'links.links', true>;
+    companyName: Schema.Attribute.String;
+    endDate: Schema.Attribute.Date;
+    location: Schema.Attribute.String;
+    startDate: Schema.Attribute.Date;
+    title: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Company Name'>;
+    workSummary: Schema.Attribute.RichText;
   };
 }
 
 export interface LinksLinks extends Struct.ComponentSchema {
   collectionName: 'components_links_links';
   info: {
-    displayName: 'links';
     description: '';
+    displayName: 'links';
   };
   attributes: {
     link: Schema.Attribute.String &
@@ -60,51 +49,62 @@ export interface LinksLinks extends Struct.ComponentSchema {
   };
 }
 
-export interface ExperienceExperience extends Struct.ComponentSchema {
-  collectionName: 'components_experience_experiences';
+export interface PlatformSocialLinks extends Struct.ComponentSchema {
+  collectionName: 'components_platform_social_links';
   info: {
-    displayName: 'experience';
-    icon: 'briefcase';
     description: '';
+    displayName: 'social links';
+    icon: 'book';
   };
   attributes: {
-    title: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Company Name'>;
-    companyName: Schema.Attribute.String;
-    location: Schema.Attribute.String;
-    workSummary: Schema.Attribute.RichText;
-    startDate: Schema.Attribute.Date;
-    endDate: Schema.Attribute.Date;
+    link: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'https://github.com'>;
+    platform: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Github'>;
   };
 }
 
-export interface EducationEducation extends Struct.ComponentSchema {
-  collectionName: 'components_education_educations';
+export interface ProjectProject extends Struct.ComponentSchema {
+  collectionName: 'components_project_projects';
   info: {
-    displayName: 'education';
-    icon: 'book';
     description: '';
+    displayName: 'project';
+    icon: 'file';
   };
   attributes: {
-    universityName: Schema.Attribute.String &
-      Schema.Attribute.DefaultTo<'University Name'>;
-    description: Schema.Attribute.Text & Schema.Attribute.DefaultTo<'gpa-8.91'>;
-    major: Schema.Attribute.String & Schema.Attribute.DefaultTo<'B.Tech'>;
-    degree: Schema.Attribute.String &
-      Schema.Attribute.DefaultTo<'AI & Data Science'>;
-    startDate: Schema.Attribute.Date;
-    endDate: Schema.Attribute.Date;
+    description: Schema.Attribute.RichText &
+      Schema.Attribute.DefaultTo<'<ul>   <li>     Lorem ipsum dolor sit amet, <b>consectetur</b> adipiscing elit.   </li>   <li>     Nulla non tortor ac nibh dignissim egestas nec a <b>magna</b>. Etiam     bibendum <b>purus non justo</b> elementum egestas.   </li>   <li>     Vestibulum pharetra <b>orci quis sapien</b> convallis, vel pellentesque     lorem hendrerit. <b>Morbi</b> et lacus lectus. Nam vehicula a erat id     efficitur.   </li>   <li>     Curabitur volutpat erat id magna porttitor ultrices. Cras consequat, orci in     lacinia malesuada, nibh eros interdum massa, ut venenatis ante felis tempus     erat. Proin a dolor quis libero convallis posuere. Mauris id est cursus,     porta risus in, pulvinar augue. In vel viverra ligula.   </li> </ul>;'>;
+    links: Schema.Attribute.Component<'links.links', true>;
+    techStack: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'JavaScript, TypeScript, ReactJS'>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Project Title'>;
+  };
+}
+
+export interface SkillsSkills extends Struct.ComponentSchema {
+  collectionName: 'components_skills_skills';
+  info: {
+    description: '';
+    displayName: 'skills';
+    icon: 'search';
+  };
+  attributes: {
+    skillNames: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'C, C++, Java, Python, JavaScript, TypeScript'>;
+    skillType: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Programming languages'>;
   };
 }
 
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
-      'skills.skills': SkillsSkills;
+      'education.education': EducationEducation;
+      'experience.experience': ExperienceExperience;
+      'links.links': LinksLinks;
       'platform.social-links': PlatformSocialLinks;
       'project.project': ProjectProject;
-      'links.links': LinksLinks;
-      'experience.experience': ExperienceExperience;
-      'education.education': EducationEducation;
+      'skills.skills': SkillsSkills;
     }
   }
 }

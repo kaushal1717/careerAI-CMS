@@ -2,6 +2,10 @@
 
 module.exports = {
   async index(ctx) {
-    ctx.send("OK"); // Send 'OK' response when the API is hit
+    try {
+      ctx.send("ok");
+    } catch (error) {
+      ctx.send("not ok");
+    }
   },
 };
